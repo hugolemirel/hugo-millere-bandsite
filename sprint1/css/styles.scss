@@ -1,0 +1,331 @@
+// VARIABLES ---------------------------------
+
+  // COLORS-------------------------
+    $black-on-white: #323232;
+    $white-on-black: #fff;
+  // -------------------------------
+
+  // FONTS-------------------------
+
+  @font-face {
+	font-family: "AvenirNext LT Pro";
+    src: url('../fonts/AvenirNextLTPro-regular.woff2') format("woff2"),
+         url('../fonts/AvenirNextLTPro-regular.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: "AvenirNext LT Pro";
+    src: url('../fonts/AvenirNextLTPro-Bold.woff2') format("woff2"),
+         url('../fonts/AvenirNextLTPro-Bold.woff') format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: "AvenirNext LT Pro";
+    src: url('../fonts/AvenirNextLTPro-Medium.woff2') format("woff2"),
+         url('../fonts/AvenirNextLTPro-Medium.woff') format("woff");
+    font-weight: 500;
+    font-style: normal;
+
+}
+    $main-fontface: 'AvenirNext LT Pro';
+    $base-fontsize: 16px;
+// -------------------------------
+
+
+// MIXINS -----------------------------------------
+
+  // ALIGNMENT-------------------------
+    @mixin flexed-hrztly-centered {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    } 
+
+    @mixin flexed-vrtcly-centered {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    @mixin flexed-hrztly-left {
+        display: flex;
+        justify-content: flex-start;
+    }
+// -------------------------------
+
+
+body {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: $main-fontface;
+}
+
+* {
+    box-sizing: border-box;   
+}
+
+
+// HEADER -----------------------------------------
+
+.header {
+    height: 14vh;
+    margin: 0 auto;
+    background-color: $black-on-white;
+    position: relative;
+}
+  
+.logo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    margin-bottom: 16px;
+  }
+  
+nav {
+    display: flex;
+    width:100%;
+    position: absolute;
+    bottom:0px;
+}
+
+.navLink {
+    display: inline;
+    width:50%;
+    text-align: center;
+    padding-bottom:8px;
+
+    a {
+        color: $white-on-black;
+        text-decoration: none;
+    }
+    
+}
+
+.active {
+    border-bottom: 5px solid white;
+    font-weight: 500;
+}
+
+// /END HEADER -----------------------------------------
+
+
+// HERO -----------------------------------------
+.hero {
+    display:flex;
+    align-items: center;
+    background: url(../img/concert-1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 27vh;
+    position: relative;
+}
+
+.heroOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50,50,50,0.5);
+}
+
+.hero h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 2rem;
+    text-align: left;
+    margin-left: 1.5rem;
+    color: $white-on-black;
+    z-index: 10;
+}
+
+// / END HERO -----------------------------------------
+
+
+
+// MAIN SECTION -----------------------------------------
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 1rem 0 1rem;
+}
+
+.introSection h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: left;
+    color: $black-on-white;
+}
+
+.introImg {
+    margin-bottom: 1.5rem;
+
+    img {
+     width: 100%;
+     height: 30vh;
+    }
+}
+
+.introExerpt {
+    font-size:0.875rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.introExerptSignature {
+    margin-bottom: 2.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.intro {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    p {
+        font-size: 0.810rem;
+        line-height: 1.125rem;
+    }
+}
+
+// Photo Section -----------------------------------------
+.gallery {
+    background-color: #FAFAFA;
+    padding: 1rem 1rem 2rem 1rem;
+
+    h1 {
+        margin-bottom: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+.photoSection{
+    @include flexed-vrtcly-centered;
+
+    .photo {
+        margin-bottom: 1rem;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+// /End Photo Section -----------------------------------------
+// / END MAIN SECTION -----------------------------------------
+
+
+// FOOTER -----------------------------------------
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    height: auto;
+    background-color: #323232;
+    color: white;
+    padding: 1rem 0 0 1.5rem;
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+    
+.row1, .row2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: auto;
+    width:100%;
+}
+
+.row2 {
+    margin-top: -20px;
+}
+    
+.footerHeader {
+    min-width: 100%;
+}
+
+.footerHeader3 {
+    visibility: hidden;
+}
+    
+.block1, .block2, .block3 {
+    min-width:33%;
+}
+    
+.block1 ul, .block2 ul, .block3 ul {
+    list-style-type: none;
+    margin-left: -40px;
+}
+    
+.block1 li, .block2 li, .block3 li {
+    margin-bottom: 25px;
+}
+    
+.block1 li a, .block2 li a, .block3 li a{
+    text-decoration: none;
+    color: white;
+}
+
+li h4 {
+ font-size: 1rem;
+}
+    
+    
+.social ul {
+    margin-top: 20px;
+    width: 100%;
+    list-style-type: none;
+        }
+    
+.social li {
+    display: inline;
+    margin-right: 2rem;
+    }
+
+.social {
+    @include flexed-hrztly-left;
+        
+        ul {
+            @include flexed-hrztly-left;
+            list-style-type: none;
+            padding-left: 0;
+            }
+}
+
+
+.copy { 
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+// /END FOOTER -----------------------------------------
+
+
+
+
+// MEDIA QUERIES ----------------------------------------------
+
+@media only screen and (min-width: 768px) {
+
+    @import 'partials/_tablet';
+
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+    @import 'partials/_desktop';
+
+}
+
+// / END MEDIA QUERIES -----------------------------------------

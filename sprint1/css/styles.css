@@ -1,0 +1,707 @@
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../fonts/AvenirNextLTPro-regular.woff2") format("woff2"), url("../fonts/AvenirNextLTPro-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../fonts/AvenirNextLTPro-Medium.woff2") format("woff2"), url("../fonts/AvenirNextLTPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: "AvenirNext LT Pro";
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  height: 14vh;
+  margin: 0 auto;
+  background-color: #323232;
+  position: relative;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 15px;
+  margin-bottom: 16px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.navLink {
+  display: inline;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.navLink a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.active {
+  border-bottom: 5px solid white;
+  font-weight: 500;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(../img/concert-1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 27vh;
+  position: relative;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+.hero h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 2rem;
+  text-align: left;
+  margin-left: 1.5rem;
+  color: #fff;
+  z-index: 10;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.introSection h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: left;
+  color: #323232;
+}
+
+.introImg {
+  margin-bottom: 1.5rem;
+}
+
+.introImg img {
+  width: 100%;
+  height: 30vh;
+}
+
+.introExerpt {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.introExerptSignature {
+  margin-bottom: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.intro {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.intro p {
+  font-size: 0.810rem;
+  line-height: 1.125rem;
+}
+
+.gallery {
+  background-color: #FAFAFA;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.gallery h1 {
+  margin-bottom: 1.5rem;
+  line-height: 2rem;
+}
+
+.photoSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.photoSection .photo {
+  margin-bottom: 1rem;
+}
+
+.photoSection .photo img {
+  max-width: 100%;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: auto;
+  background-color: #323232;
+  color: white;
+  padding: 1rem 0 0 1.5rem;
+}
+
+.footer h1 {
+  margin-bottom: 0;
+}
+
+.row1, .row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: auto;
+  width: 100%;
+}
+
+.row2 {
+  margin-top: -20px;
+}
+
+.footerHeader {
+  min-width: 100%;
+}
+
+.footerHeader3 {
+  visibility: hidden;
+}
+
+.block1, .block2, .block3 {
+  min-width: 33%;
+}
+
+.block1 ul, .block2 ul, .block3 ul {
+  list-style-type: none;
+  margin-left: -40px;
+}
+
+.block1 li, .block2 li, .block3 li {
+  margin-bottom: 25px;
+}
+
+.block1 li a, .block2 li a, .block3 li a {
+  text-decoration: none;
+  color: white;
+}
+
+li h4 {
+  font-size: 1rem;
+}
+
+.social ul {
+  margin-top: 20px;
+  width: 100%;
+  list-style-type: none;
+}
+
+.social li {
+  display: inline;
+  margin-right: 2rem;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.copy {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 14vh;
+    background-color: #323232;
+    position: relative;
+  }
+  .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    width: 20%;
+    height: 14vh;
+    margin: 0 0 0 1.5rem;
+    top: 0;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    width: 30%;
+    height: 14vh;
+    padding-top: 17px;
+  }
+  .navLink {
+    width: 50%;
+    text-align: center;
+  }
+  .navLink a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .active {
+    border-bottom: none;
+  }
+  .hero {
+    width: 100%;
+    height: 47.22vh;
+  }
+  .hero h1 {
+    font-size: 3.75rem;
+    line-height: 5rem;
+    margin-left: 1.5rem;
+  }
+  .introSection h1 {
+    font-size: 2.25rem;
+  }
+  .introImg {
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  .introImg img {
+    width: 100%;
+    height: auto;
+  }
+  .introExerpt {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .introExerptSignature {
+    margin-bottom: 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  .intro {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .intro p {
+    font-size: 0.88rem;
+    line-height: 1.32rem;
+  }
+  .gallery {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+  .gallery h1 {
+    margin-bottom: 2.25rem;
+    line-height: 2rem;
+  }
+  .photoSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .photo {
+    margin-bottom: 1rem;
+    width: 31%;
+  }
+  .photo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    background-color: #323232;
+    color: white;
+    padding: 1rem 0 0 1.5rem;
+  }
+  .footer h1 {
+    margin: 0;
+  }
+  .row1, .row2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    width: 100%;
+  }
+  .row2 {
+    margin-top: 1.25rem;
+  }
+  .footerHeader {
+    min-width: 33%;
+  }
+  .footerHeader3 {
+    min-width: 33%;
+    text-align: right;
+    padding-right: 1.5rem;
+    visibility: visible;
+  }
+  .social ul {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 14vh;
+    background-color: #323232;
+  }
+  .logo {
+    width: 7.13rem;
+    height: 14vh;
+    margin: 0 0 0  1.5rem;
+  }
+  .logo, .hero h1 {
+    margin-left: 10.25rem;
+  }
+  nav {
+    width: 30%;
+    height: 14vh;
+    padding-top: 0;
+  }
+  .navLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 5rem;
+    height: 14vh;
+    margin-left: 3.5rem;
+    padding-top: 1.06rem;
+  }
+  .navLink a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .hero {
+    width: 100%;
+    height: 670px;
+  }
+  .introSection h1 {
+    font-size: 2.25rem;
+    margin: 3rem 0 3rem 11.25rem;
+  }
+  .introImg {
+    margin-bottom: 1.5rem;
+    width: 896px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .introImg img {
+    max-width: 896px;
+    max-height: 450px;
+  }
+  .introExerpt {
+    width: 896px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+  }
+  .introExerptSignature {
+    width: 896px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3.5rem;
+    margin-top: 2.50rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .introTitle {
+    width: 896px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h4 {
+    margin-right: auto;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  .intro {
+    width: 896px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-columns: 420px 2;
+            columns: 420px 2;
+    -webkit-column-gap: 2.50rem;
+            column-gap: 2.50rem;
+  }
+  .intro p {
+    font-size: 0.88rem;
+    line-height: 1.32rem;
+  }
+  .gallery {
+    padding: 1rem 1rem 2rem 1rem;
+    width: 100%;
+  }
+  .gallery h1 {
+    padding-left: 12rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    line-height: 2rem;
+  }
+  .photoSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10.25rem;
+  }
+  .photo {
+    margin: 1.5rem;
+    max-width: 344px;
+    max-height: 193px;
+  }
+  .photo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .active {
+    border-bottom: 0.310rem solid  white;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    background-color: #323232;
+    color: white;
+    padding: 1rem 0 0 10.25rem;
+  }
+  .footer h1 {
+    margin: 0;
+  }
+  .row1, .row2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    margin-top: 3rem;
+  }
+  .row2 {
+    margin-top: 1.25rem;
+    width: 60%;
+  }
+  .row3 {
+    width: 100%;
+    text-align: left;
+  }
+  .footerHeader {
+    min-width: 33%;
+  }
+  .footerHeader3 {
+    min-width: 33%;
+    text-align: right;
+    visibility: visible;
+    padding-right: 60px;
+  }
+  .footerHeader3 img {
+    max-width: 120px;
+    max-height: 24px;
+  }
+  .social ul {
+    margin-top: 20px;
+    width: 100%;
+    list-style-type: none;
+    margin-left: -170px;
+  }
+  .social ul li {
+    display: inline;
+    margin-right: 2rem;
+    padding-bottom: 15px;
+  }
+  .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .social ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
