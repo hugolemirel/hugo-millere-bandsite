@@ -1,3 +1,8 @@
+
+
+
+
+
 // VARIABLES ---------------------------------
 
   // COLORS-------------------------
@@ -152,6 +157,7 @@ nav {
 
 
 // MAIN SECTION -----------------------------------------
+
 .main {
     display: flex;
     flex-direction: column;
@@ -202,11 +208,13 @@ nav {
     background-color: #FAFAFA;
     padding: 1rem 1rem 2rem 1rem;
 
+
     h1 {
         margin-bottom: 1.5rem;
         line-height: 2rem;
     }
 }
+
 
 .photoSection{
     @include flexed-vrtcly-centered;
@@ -243,7 +251,6 @@ nav {
     flex-flow: row wrap;
     justify-content: flex-start;
     height: auto;
-    width:100%;
 }
 
 .row2 {
@@ -321,11 +328,9 @@ li h4 {
 
 }
 
-
 @media only screen and (min-width: 1440px) {
 
     @import 'partials/_desktop';
-
+    
 }
-
 // / END MEDIA QUERIES -----------------------------------------

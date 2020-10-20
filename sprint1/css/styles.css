@@ -223,7 +223,6 @@ nav {
       -ms-flex-pack: start;
           justify-content: flex-start;
   height: auto;
-  width: 100%;
 }
 
 .row2 {
@@ -520,7 +519,9 @@ li h4 {
   }
   .navLink a {
     color: #fff;
-    text-decoration: none;
+  }
+  .active {
+    border-bottom: 0.310rem solid  white;
   }
   .hero {
     width: 100%;
@@ -553,7 +554,6 @@ li h4 {
     margin-bottom: 3.5rem;
     margin-top: 2.50rem;
     font-size: 1.3rem;
-    font-weight: 500;
   }
   .introTitle {
     width: 896px;
@@ -598,9 +598,9 @@ li h4 {
             flex-flow: row wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10.25rem;
   }
   .photo {
     margin: 1.5rem;
@@ -611,97 +611,62 @@ li h4 {
     max-width: 100%;
     max-height: 100%;
   }
-  .active {
-    border-bottom: 0.310rem solid  white;
-  }
   .footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: auto;
-    background-color: #323232;
-    color: white;
-    padding: 1rem 0 0 10.25rem;
+    padding-top: 1rem;
   }
-  .footer h1 {
+  .footer s
+h1 {
     margin: 0;
   }
+  .innerFooter {
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .row1, .row2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: auto;
     margin-top: 3rem;
+    width: 100%;
   }
   .row2 {
     margin-top: 1.25rem;
-    width: 60%;
+    margin-right: auto;
+    width: 80%;
   }
   .row3 {
     width: 100%;
     text-align: left;
   }
-  .footerHeader {
+  .footerHeader1 {
+    min-width: 25%;
+    text-align: left;
+  }
+  .footerHeader2 {
     min-width: 33%;
+    margin-left: 20px;
   }
   .footerHeader3 {
-    min-width: 33%;
+    min-width: 40%;
     text-align: right;
     visibility: visible;
-    padding-right: 60px;
   }
   .footerHeader3 img {
     max-width: 120px;
     max-height: 24px;
   }
-  .social ul {
-    margin-top: 20px;
-    width: 100%;
-    list-style-type: none;
-    margin-left: -170px;
-  }
   .social ul li {
-    display: inline;
-    margin-right: 2rem;
     padding-bottom: 15px;
-  }
-  .social {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .social ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    list-style-type: none;
-    padding-left: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
