@@ -101,6 +101,12 @@ nav {
   font-weight: 500;
 }
 
+.heroTitleContnr {
+  padding: 0;
+  margin-right: auto;
+  z-index: 30;
+}
+
 .heroOverlay {
   position: absolute;
   top: 0;
@@ -131,7 +137,7 @@ nav {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background: url(../img/Photo-gallery-3.jpg);
+  background: url(../img/zomea5tdv8651.jpg);
   height: 472px;
 }
 
@@ -147,9 +153,9 @@ nav {
 
 iframe {
   bottom: 0;
-  width: 90%;
+  width: 85%;
   height: 120px;
-  margin: 0 auto;
+  margin: 0 auto 0 1.5rem;
   background-color: #777;
   z-index: 15;
 }
@@ -209,14 +215,6 @@ iframe {
   padding-left: 0;
 }
 
-.showListContnr hr.divider {
-  border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  margin: 1rem  0 2rem 0;
-}
-
 .hdrLi {
   color: #ccc;
   margin-bottom: 0.9rem;
@@ -230,14 +228,14 @@ iframe {
 
 .butBuyTickets {
   background-color: #323232;
-  width: 100%;
-  margin-bottom: 2rem 0 1rem 0;
   border-radius: 4px;
-  height: 50px;
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
   border: none;
+  background-color: #323232;
+  width: 100%;
+  height: 50px;
 }
 
 .gallery {
@@ -274,14 +272,74 @@ iframe {
   max-width: 100%;
 }
 
+.message-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#messageList {
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0;
+}
+
+#messageList li {
+  width: 100%;
+  padding-top: 1.5rem;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+#messageList h3 {
+  display: inline;
+  width: auto;
+  font-size: 1rem;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+#messageList h4 {
+  display: inline;
+  width: auto;
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-left: 3rem;
+  color: #CCC;
+}
+
+#messageList p {
+  display: inline-block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0;
+  text-align: justify;
+}
+
+.conversContainer {
+  padding: 2rem 1rem 2rem 1rem;
+  width: 100%;
+}
+
+.conversContainer h1 {
+  margin-bottom: 0;
+  line-height: 2rem;
+}
+
 .conversation {
   padding: 2rem 1rem 2.5rem 1rem;
 }
 
 .conversation h1 {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 2rem;
+  font-weight: 900;
+  text-align: left;
+  color: #323232;
 }
 
 .innerConvers {
@@ -299,7 +357,7 @@ iframe {
 
 .formCol, .commentCol {
   width: 80%;
-  padding-left: 15px;
+  padding-left: 0.94rem;
   padding-top: 1.5rem;
 }
 
@@ -322,18 +380,18 @@ iframe {
 .avatar {
   margin: 0;
   border-radius: 50%;
-  height: 54px;
-  width: 54px;
-}
-
-.avatar__form {
-  margin-top: 0px;
+  height: 48px;
+  width: 48px;
 }
 
 .avatar img {
   height: 54px;
   width: 54px;
   border-radius: 50%;
+}
+
+.avatar__form {
+  margin-top: 0px;
 }
 
 input[type=text], textarea {
@@ -343,8 +401,6 @@ input[type=text], textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #F7F7F7;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   outline: none;
   font-family: "AvenirNext LT Pro";
   font-size: 0.9rem;
@@ -352,6 +408,10 @@ input[type=text], textarea {
 }
 
 input[type=text]:focus {
+  border: 2px solid #323232;
+}
+
+textarea:focus {
   border: 2px solid #323232;
 }
 
@@ -370,6 +430,7 @@ input[type=submit] {
   margin-bottom: 8px;
   border: none;
   border-radius: 4px;
+  outline: none;
 }
 
 .commentCol {
@@ -388,6 +449,7 @@ input[type=submit] {
 .commentDate {
   display: inline;
   height: auto;
+  margin-top: 1px;
   width: 35%;
   font-size: 0.9rem;
   color: #ccc;
@@ -464,17 +526,19 @@ input[type=submit] {
 }
 
 button {
+  background-color: #323232;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
   width: 100%;
   height: 3rem;
-  background-color: #323232;
-  color: white;
   padding: 14px 20px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
   margin-bottom: 8px;
-  border: none;
-  border-radius: 4px;
   font-size: 1.2rem;
 }
 
@@ -550,12 +614,13 @@ button {
 }
 
 .block1 li, .block2 li, .block3 li {
-  margin-bottom: 25px;
-}
-
-.block1 li a, .block2 li a, .block3 li a {
   text-decoration: none;
   color: white;
+}
+
+.block1 a, .block2 a, .block3 a {
+  text-decoration: none;
+  color: #fff;
 }
 
 li h4 {
@@ -625,40 +690,64 @@ li h4 {
         -ms-flex-align: center;
             align-items: center;
     position: relative;
-    width: 30%;
+    width: 40%;
     height: 14vh;
     padding-top: 17px;
   }
   .navLink {
-    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 200px;
+    height: 100%;
     text-align: center;
-  }
-  .navLink a {
-    color: #fff;
-    text-decoration: none;
-  }
-  .active {
-    border-bottom: none;
+    padding: 5px 20px;
+    margin-right: 50px;
   }
   .hero {
     width: 100%;
-    height: 47.22vh;
+    height: 670px;
+    background-size: cover;
   }
   .hero h1 {
     font-size: 3.75rem;
     line-height: 5rem;
     margin-left: 1.5rem;
+    margin-right: auto;
+    max-width: 80%;
+  }
+  .heroTitle1 {
+    margin-top: 6rem;
+  }
+  .heroTitle1 h3 {
+    font-size: 1.5rem;
+  }
+  iframe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    bottom: 0;
+    width: 50%;
+    height: 140px;
+    margin-left: 1.5rem;
+    margin-right: auto;
+    background-color: #777;
+    z-index: 15;
   }
   .introSection h1 {
     font-size: 2.25rem;
   }
   .introImg {
     margin-bottom: 1.5rem;
-    width: 100%;
-  }
-  .introImg img {
-    width: 100%;
-    height: auto;
   }
   .introExerpt {
     font-size: 1.5rem;
@@ -666,16 +755,10 @@ li h4 {
     font-weight: 600;
   }
   .introExerptSignature {
-    margin-bottom: 2.5rem;
     font-size: 1.3rem;
-    font-weight: 500;
   }
   h4 {
     font-size: 2rem;
-  }
-  .intro {
-    margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
   }
   .intro p {
     font-size: 0.88rem;
@@ -686,7 +769,6 @@ li h4 {
   }
   .gallery h1 {
     margin-bottom: 2.25rem;
-    line-height: 2rem;
   }
   .photoSection {
     display: -webkit-box;
@@ -707,6 +789,14 @@ li h4 {
     max-width: 100%;
     max-height: 100%;
   }
+  .conversContainer {
+    padding: 3rem 1rem 2rem 1rem;
+    width: 100%;
+  }
+  .conversContainer h1 {
+    margin-bottom: 1.5rem;
+    line-height: 2rem;
+  }
   .conversation {
     padding: 2rem 1rem 2.5rem 1rem;
     width: 70%;
@@ -717,14 +807,8 @@ li h4 {
     font-size: 2rem;
   }
   .innerConvers {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: flex-;
-        -ms-flex-pack: flex-;
-            justify-content: flex-;
-    height: auto;
-    width: 100%;
+    padding-top: 1rem;
+    border-bottom: 2px solid #E1E1E1;
   }
   .formCol, .commentCol {
     width: 90%;
@@ -732,47 +816,14 @@ li h4 {
   }
   .avatarCol {
     width: 10%;
-    height: auto;
-    padding-top: 0;
-    text-align: right;
-  }
-  .avatar {
-    margin: 0;
-    border-radius: 50%;
-    height: 54px;
-    width: 54px;
+    padding-top: 1rem;
   }
   .avatar__form {
     margin-top: 15px;
   }
-  .avatar img {
-    height: 54px;
-    width: 54px;
-    border-radius: 50%;
-  }
   input[type=text], textarea {
     width: 100%;
-    padding: 12px 20px;
     margin: 0px 0 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #F7F7F7;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-    font-family: "AvenirNext LT Pro";
-    font-size: 0.9rem;
-  }
-  input[type=text]:focus {
-    border: 2px solid #323232;
-  }
-  .labelTxt {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #CCC;
-  }
-  textarea {
-    resize: none;
   }
   .button {
     display: -webkit-box;
@@ -784,37 +835,20 @@ li h4 {
   }
   input[type=submit] {
     width: 30%;
-    background-color: #323232;
-    color: white;
-    padding: 14px 20px;
     margin-top: 10px;
     padding: 1.1rem 0;
-    border: none;
-    border-radius: px;
     font-size: 0.9rem;
     font-weight: 600;
-  }
-  hr.divider {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 2rem 0 1.5rem 0;
   }
   .commentCol {
     width: 100%;
   }
   .commentAuthor {
     width: auto;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #323232;
   }
   .commentDate {
     height: auto;
     width: auto;
-    font-size: 0.9rem;
-    color: #ccc;
     text-align: left;
     position: absolute;
     right: auto;
@@ -822,9 +856,43 @@ li h4 {
     margin-top: 1px;
   }
   .comment {
-    height: auto;
-    margin-top: 1rem;
     font-size: 0.9rem;
+  }
+  .showListContnr {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .shows-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .shows-list__item h2::before {
+    content: "DATE";
+    margin-bottom: 1rem;
+    margin-right: auto;
+  }
+  .shows-list__item p::before {
+    content: "VENUE";
+    margin-right: auto;
+  }
+  .shows-list__date {
+    margin: 0.625rem 0;
+    margin-bottom: 0.9rem;
+    width: 30%;
+  }
+  .shows-list__venue {
+    width: 30%;
+  }
+  .shows-list__location {
+    width: 30%;
+  }
+  button {
+    width: 160px;
   }
   .footer {
     display: -webkit-box;
@@ -948,6 +1016,44 @@ li h4 {
   .hero {
     width: 100%;
     height: 670px;
+    padding-left: 8.9rem;
+    padding-top: 10rem;
+  }
+  .heroTitleContnr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 0;
+    width: 1200px;
+    margin-top: 3rem;
+    margin-right: auto;
+  }
+  .hero h1 {
+    font-size: 3.75rem;
+    line-height: 5rem;
+    margin: 0 0 0 1.5rem;
+    max-width: 50%;
+  }
+  .heroTitle1 {
+    margin-top: 0;
+  }
+  .heroTitle1 h3 {
+    font-size: 1.5rem;
+    margin: 0 0;
+  }
+  iframe {
+    width: 436px;
+    height: 146px;
+    background-color: #777;
+    z-index: 15;
+    margin-left: 64px;
+    margin-bottom: 1.6rem;
   }
   .introSection h1 {
     font-size: 2.25rem;
@@ -1034,12 +1140,17 @@ li h4 {
     max-height: 100%;
   }
   .conversContainer {
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
     width: 100%;
+  }
+  .conversContainer h1 {
+    margin-bottom: 1.5rem;
+    line-height: 2rem;
+    margin-left: 180px;
   }
   .conversation {
     padding: 2rem 1rem 2.5rem 1rem;
-    max-width: 1150px;
+    max-width: 528px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1051,6 +1162,7 @@ li h4 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
   .formCol, .commentCol {
     width: 460px;
@@ -1102,13 +1214,6 @@ li h4 {
     font-size: 0.9rem;
     font-weight: 600;
   }
-  hr.divider {
-    width: 570px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin-left: auto;
-    margin-right: auto;
-  }
   .commentCol {
     width: 460px;
   }
@@ -1127,6 +1232,51 @@ li h4 {
     margin-top: 1rem;
     font-size: 0.9rem;
   }
+  .showListContnr {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .showListContnr h1 {
+    max-width: 10%;
+  }
+  .shows-list {
+    width: 804px;
+    margin-left: auto;
+    margin-right: 180px;
+    margin-top: -5rem;
+  }
+  .shows-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .shows-list__item h2::before {
+    content: "DATE";
+    margin-bottom: 1rem;
+    margin-right: auto;
+  }
+  .shows-list__item p::before {
+    content: "VENUE";
+    margin-right: auto;
+  }
+  .shows-list__date {
+    margin: 0.625rem 0;
+    margin-bottom: 0.9rem;
+    width: 30%;
+  }
+  .shows-list__venue {
+    width: 30%;
+  }
+  .shows-list__location {
+    width: 30%;
+  }
+  button {
+    width: 160px;
+  }
   .footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -1144,7 +1294,7 @@ li h4 {
     margin-left: auto;
     margin-right: auto;
   }
-  .row1, .row2 {
+  .row1 {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -1154,7 +1304,7 @@ li h4 {
     margin-top: 3rem;
     width: 100%;
   }
-  .row2 {
+  .row1row2 {
     margin-top: 1.25rem;
     margin-right: auto;
     width: 80%;

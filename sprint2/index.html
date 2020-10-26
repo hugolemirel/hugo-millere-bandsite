@@ -111,8 +111,9 @@
 <!-- -------------------------------  "JOIN THE CONVERSATION"  ---------------------------------- -->
 
 <div class="conversContainer">
-<div class="conversation">
   <h1>Join the Conversation</h1>
+<div class="conversation">
+
     <div class="innerConvers">
       <div class="avatarCol">
         <div class="avatar avatar__form">
@@ -120,19 +121,19 @@
         </div>
       </div>
       <div class="formCol">
-        <form id="comment_form"action="URL" method="GET">
-          <label class="labelTxt">NAME</label>
-          <input type="text" id="fname" name="name" placeholder="Mohan Muruge">
-      
+        <form id="messageForm" class="message-form">
+            <label class="labelTxt">NAME</label>
+          <input name="name" type="text" placeholder="Type your name here">
           <label class="labelTxt">COMMENT</label>
-          <textarea rows="6">Add a new comment</textarea>
-      
-          <div class="button"><input  type="submit" value="COMMENT"></div>
+          <textarea rows="6" name="message" placeholder="Add your comment here"></textarea>
+          <div class="button"><input type="submit" value="ADD COMMENT"></div>
         </form>
       </div>
     </div>
 
-<div class="innerConvers">
+    <ul id="messageList"></ul>
+
+ <div class="innerConvers">
   <div class="avatarCol">
     <div class="avatar">
       <img src="https://i.pinimg.com/originals/0a/dd/87/0add874e1ea0676c4365b2dd7ddd32e3.jpg">
@@ -186,7 +187,6 @@
       see him I feel instantly happy! He’s
       definitely my favorite ever!</div>
   </div>
-</div>
 
 
 </div>
@@ -249,6 +249,6 @@
   </div>
 </div>
 <!-- -------------------------------  / END FOOTER  ---------------------------------- -->
-
+<script src='scripts/add_comments.js'></script>
 </body>
 </html>

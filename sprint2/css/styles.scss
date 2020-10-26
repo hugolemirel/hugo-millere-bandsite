@@ -1,3 +1,4 @@
+@import "partials/mixins.scss";
 
 // VARIABLES ---------------------------------
 
@@ -33,29 +34,6 @@
 }
     $main-fontface: 'AvenirNext LT Pro';
     $base-fontsize: 16px;
-// -------------------------------
-
-
-// MIXINS -----------------------------------------
-
-  // ALIGNMENT-------------------------
-    @mixin flexed-hrztly-centered {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    } 
-
-    @mixin flexed-vrtcly-centered {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    } 
-
-    @mixin flexed-hrztly-left {
-        display: flex;
-        justify-content: flex-start;
-    }
 // -------------------------------
 
 
@@ -142,6 +120,12 @@ nav {
     }
 }
 
+.heroTitleContnr{
+    padding: 0;
+    margin-right: auto;
+    z-index: 30;
+}
+
 .heroOverlay{
     position: absolute;
     top: 0;
@@ -165,7 +149,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background: url(../img/Photo-gallery-3.jpg);
+    background: url(../img/zomea5tdv8651.jpg);
     height: 472px;
 
     h1 {
@@ -177,19 +161,16 @@ nav {
         color: $white-on-black;
         margin-bottom: 2rem;
     }
-
-
 }
 
 iframe {
     bottom: 0;
-    width: 90%;
+    width: 85%;
     height: 120px;
-    margin: 0 auto;
+    margin: 0 auto 0 1.5rem;;
     background-color: #777;
     z-index: 15;
 }
-
 
 // / END HERO -----------------------------------------
 
@@ -242,19 +223,12 @@ iframe {
         line-height: 1.125rem;
     }
 }
+
 .showListContnr {
     
     ul {
         list-style-type: none;
         padding-left: 0;
-    }
-
-    hr.divider {
-        border: 0;
-        height: 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        margin: 1rem  0 2rem 0;
     }
 }
 
@@ -270,31 +244,23 @@ iframe {
 }
 
 .butBuyTickets {
+    @include button;
     background-color: $black-on-white;
     width:100%;
-    margin-bottom: 2rem 0 1rem 0;
-    border-radius: 4px;
     height: 50px;
-    color: $white-on-black;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
 }
 
 
-
-// Photo Section -----------------------------------------
+// Photo Gallery Section -----------------------------------------
 .gallery {
     background-color: #FAFAFA;
     padding: 1rem 1rem 2rem 1rem;
 
-
-    h1 {
-        margin-bottom: 1.5rem;
-        line-height: 2rem;
-    }
+        h1 {
+            margin-bottom: 1.5rem;
+            line-height: 2rem;
+        }
 }
-
 
 .photoSection{
     @include flexed-vrtcly-centered;
@@ -312,17 +278,79 @@ iframe {
 
 
 // Conversation Section ----------------------------------
+.message-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  #messageList {
+    //   display: flex;
+    //   flex-direction: column;
+      list-style-type: none;
+      width: 100%;
+      padding-left:0;
+
+
+      li {
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-between;
+        width:100%;
+        padding-top: 1.5rem;
+        border-bottom: 1px solid #E1E1E1;
+        }
+
+
+        h3 {
+            display: inline;
+            width: auto;
+            font-size: 1rem;
+            margin-right: auto;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            display: inline;
+            width: auto;
+            font-size: 0.8rem;
+            font-weight: normal;
+            margin-left: 3rem;
+            color:#CCC;
+        }
+
+        p {
+            display: inline-block;
+            width:100%;
+            font-size: 1rem;
+            padding: 0;
+            text-align: justify;
+        }
+
+      }
+
+  
+
+.conversContainer {
+    padding: 2rem 1rem 2rem 1rem;
+    width: 100%;
+    h1 {
+        margin-bottom: 0;
+        line-height: 2rem;
+    }
+}
 
 .conversation {
     padding: 2rem 1rem 2.5rem 1rem;
 
     h1 {
         font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-        line-height: 2rem;
+        font-weight: 900;
+        text-align: left;
+        color: $black-on-white;
     }
 }
-
 
 .innerConvers {
     display: flex;
@@ -335,14 +363,12 @@ iframe {
 
 .formCol, .commentCol{
     width: 80%;
-    padding-left: 15px;
+    padding-left: 0.94rem;
     padding-top: 1.5rem;
 }
 
 .avatarCol {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    @include flexed-hrztly-right;
     width: 20%;
     height: auto;
     text-align: right;
@@ -352,18 +378,18 @@ iframe {
 .avatar{
     margin: 0;
     border-radius: 50%;
-    height: 54px;
-    width: 54px;
-  }
-
-  .avatar__form{
-    margin-top: 0px;
+    height: 48px;
+    width: 48px;
   }
 
   .avatar img {
     height: 54px;
     width: 54px;
     border-radius: 50%;
+  }
+
+  .avatar__form{
+    margin-top: 0px;
   }
 
   input[type=text], textarea {
@@ -373,14 +399,18 @@ iframe {
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #F7F7F7;
-    transition: 0.5s;
     outline: none;
     font-family: $main-fontface;
     font-size: 0.9rem;
     resize: none; //only for textarea 
+
   }
 
   input[type=text]:focus {
+    border: 2px solid $black-on-white;
+  }
+
+  textarea:focus {
     border: 2px solid $black-on-white;
   }
 
@@ -399,6 +429,7 @@ iframe {
     margin-bottom: 8px;
     border: none;
     border-radius: 4px;
+    outline: none;
   }
 
 .commentCol {
@@ -417,6 +448,7 @@ iframe {
 .commentDate {
     display: inline;
     height: auto;
+    margin-top: 1px;
     width: 35%;
     font-size: 0.9rem;
     color: #ccc;
@@ -424,6 +456,7 @@ iframe {
     position: absolute;
     right: 0;
 }
+
 
 .comment {
     height: auto;
@@ -449,7 +482,7 @@ iframe {
       padding: 0 0 1rem 0;
       border-bottom: 1px solid #ccc;
         h2::before {
-            content: "DATE" ;
+            content: "DATE";
             color: #ccc;
             display:block;
             font-size: 1.3rem;
@@ -457,7 +490,7 @@ iframe {
         }
 
         p::before {
-            content: "VENUE" ;
+            content: "VENUE";
             color: #ccc;
             display:block;
             font-size: 1.3rem;
@@ -468,7 +501,6 @@ iframe {
     &__date {
       font-size: 1.2rem;
       margin: 1rem 0 1.5rem 0;
-    //   color: #ccc;
       margin-bottom: 0.9rem;
       font-weight: 500;
     }
@@ -487,21 +519,18 @@ iframe {
 }
 
   button {
+    @include button;
     width: 100%;
     height: 3rem;
-    background-color: $black-on-white;
-    color: white;
     padding: 14px 20px;
     margin-left: auto;
     margin-right: auto; 
     margin-top: 2rem;
     margin-bottom: 8px;
-    border: none;
-    border-radius: 4px;
     font-size: 1.2rem;
 }
 
-// /End Conversation Section -----------------------------
+    // /End Show Section -----------------------------
 
 // / END MAIN SECTION -----------------------------------------
 
@@ -554,21 +583,23 @@ iframe {
     
 .block1, .block2, .block3 {
     min-width:33%;
+
+    ul {
+        list-style-type: none;
+        margin-left: -40px;
+    }
+
+    li {
+        text-decoration: none;
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: $white-on-black;
+    }
 }
     
-.block1 ul, .block2 ul, .block3 ul {
-    list-style-type: none;
-    margin-left: -40px;
-}
-    
-.block1 li, .block2 li, .block3 li {
-    margin-bottom: 25px;
-}
-    
-.block1 li a, .block2 li a, .block3 li a{
-    text-decoration: none;
-    color: white;
-}
 
 li h4 {
  font-size: 1rem;
