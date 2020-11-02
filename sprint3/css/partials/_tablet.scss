@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.logo {
+.header__logo {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -27,18 +27,18 @@ nav {
     position: relative;
     width: 40%;
     height: 14vh;
-    padding-top: 17px;
+    padding-top: 1.06rem;
 }
 
-.navLink {
+.nav__item {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width:12.5rem;
     height: 100%;
     text-align: center;
-    padding: 5px 20px ;
-    margin-right: 50px;
+    padding: 0.31rem 1.25rem ;
+    margin-right: 3.13rem;
 }
 
 // /END HEADER -----------------------------------------
@@ -121,7 +121,6 @@ font-size: 2rem;
 // Photo Gallery Section -----------------------------------------
 
 .gallery {
-    padding: 1rem 1rem 2rem 1rem;
 
         h1 {
             margin-bottom: 2.25rem;
@@ -138,7 +137,6 @@ font-size: 2rem;
     margin-bottom: 1rem;
     width: 31%;
         img {
-            max-width: 100%;
             max-height: 100%;
         }
 }
@@ -174,7 +172,7 @@ font-size: 2rem;
 
 .formCol, .commentCol{
     width: 90%;
-    padding-left: 15px;
+    padding-left: 0.94rem;
 }
 
 .avatarCol {
@@ -183,12 +181,12 @@ font-size: 2rem;
 }
 
 .avatar__form{
-    margin-top: 15px;
+    margin-top: 0.94rem;
 }
 
 input[type=text], textarea {
     width: 100%;
-    margin: 0px 0 20px 0;
+    margin: 0 0 1.25rem 0;
 }
 
 .button {
@@ -198,33 +196,13 @@ input[type=text], textarea {
 
   input[type=submit] {
     width: 30%;
-    margin-top: 10px;
+    margin-top: 0.63rem;
     padding: 1.1rem 0;
     font-size: 0.9rem;
     font-weight: 600;
 }
 
-.commentCol {
-    width: 100%;
-}
 
-.commentAuthor {
-    width: auto;
-}
-
-.commentDate {
-    height: auto;
-    width: auto;
-    text-align: left;
-    position: absolute;
-    right: auto;
-    margin-left: 1rem;
-    margin-top: 1px;
-}
-
-.comment {
-    font-size: 0.9rem;
-}
 
 // / END CONVERSATION Section -----------------------------
 
@@ -261,7 +239,7 @@ input[type=text], textarea {
       &::before {
         content: "VENUE" ;
         margin-right: auto;
-    }
+        }
     }
 
     &__location {
@@ -277,7 +255,7 @@ input[type=text], textarea {
     }
 }
 
-  button {
+button {
     width: 160px;
 }
      // /End Add-ons Show Section -----------------------------
@@ -320,34 +298,29 @@ input[type=text], textarea {
     margin-top: 1.25rem;
 }
 
-.footerHeader {
+.footerHeader, .footerHeader2, .footerHeader3{
     min-width: 33%;
 }
 
 .footerHeader2 {
-    min-width: 33%;
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 
 .footerHeader3 {
-    min-width: 33%;
     text-align: right;
     padding-right: 1rem;
     visibility: visible;
 
     img{
-        margin-top: 28px;
-    }
-    
+        margin-top: 1.75rem;
+    } 
 }
 
 .social ul {
-    margin-left: 40px;
+    margin-top: 2.50rem;
 
     li {
-        margin-top: 22px;
-        
-
+        margin-top: 1.38rem;
     }
 }
 
