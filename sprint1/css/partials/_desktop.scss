@@ -1,5 +1,4 @@
 
-
 // HEADER -----------------------------------------
     .header {
         display: flex;
@@ -40,22 +39,16 @@
 
     .active {
         border-bottom: 0.310rem solid  white;
-        }
+    }
 // /END HEADER -----------------------------------------
 
 
-
-
 // HERO -----------------------------------------
-
     .hero {
         width: 100%;
         height: 670px;
         }
-
 // / END HERO -----------------------------------------
-
-
 
 
 // MAIN SECTION -----------------------------------------
@@ -117,7 +110,7 @@
             }
         }
 
-        // Photo Section -----------------------------------------
+    // Photo Section -----------------------------------------
         .gallery {
             padding: 1rem 1rem 2rem 1rem;
             width: 100%;
@@ -151,157 +144,11 @@
         }
 
   // /End Photo Section -----------------------------------------
-
-// Conversation Section ----------------------------------
-.conversContainer {
-    padding: 1rem 1rem 2rem 1rem;
-    width: 100%;
-}
-
-.conversation {
-    padding: 2rem 1rem 2.5rem 1rem;
-    max-width: 1150px;
-    margin-left: auto;
-    margin-right: auto;
-
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 3.5rem;
-    }
-}
-
-.innerConvers {
-    // display: flex;
-    justify-content: center;
-    // height: auto;
-    // width: 100%;
-}
-
-.formCol, .commentCol{
-    width: 460px;
-    // padding-left: 15px;
-}
-
-.avatarCol {
-    width: 10%;
-    height: auto;
-    padding-top: 0;
-    // text-align: right;
-}
-
-.avatar{
-    margin: 0;
-    border-radius: 50%;
-    height: 48px;
-    width: 48px;
-  }
-
-  .avatar__form{
-    margin-top: 15px;
-  }
-
-  .avatar img {
-    height: 48px;
-    width: 48px;
-    // border-radius: 50%;
-  }
-
-  input[type=text], textarea {
-    width: 100%;
-    margin: 8px 0 24px 0;
-    border: 1px solid #ccc;
-    // border-radius: 4px;
-    // background-color: #F7F7F7;
-    // transition: 0.5s;
-    // outline: none;
-    // font-family: $main-fontface;
-    // font-size: 0.9rem;
-  }
-
-  input[type=text] {
-    padding-top: 20px;
-    line-height: 28px;
-  }
-
-//   input[type=text]:focus {
-//     border: 2px solid $black-on-white;
-//   }
-
-.labelTxt {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color:#CCC;
-}
-  
-.button {
-    display: flex;
-    justify-content: flex-end;
-}
-
-  input[type=submit] {
-    width: 160px;
-    // background-color: $black-on-white;
-    // color: white;
-    // padding: 14px 20px;
-    margin-top: 10px;
-    padding: 1.1rem 0;
-    // border: none;
-    // border-radius: px;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-
-  hr.divider {
-    width: 570px;
-    // border: 0;
-    // height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.commentCol {
-    width: 460px;
-}
-
-.commentAuthor {
-    width: auto;
-    // font-size: 0.9rem;
-    // font-weight: 600;
-    // color: $black-on-white;
-}
-
-.commentDate {
-    // height: auto;
-    width: auto;
-    // font-size: 0.9rem;
-    // color: #ccc;
-    text-align: left;
-    // position: absolute;
-    right: auto;
-    margin-left: 1rem;
-    margin-top: 1px;
-}
-
-.comment {
-    height: auto;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-}
-
-// /End Conversation Section -----------------------------
-
-
-
-  // / END MAIN SECTION -----------------------------------------
-
+// / END MAIN SECTION -----------------------------------------
 
 
 
 // FOOTER -----------------------------------------
-
     .footer {
         justify-content: flex-start;
         align-items: center;
@@ -357,8 +204,7 @@
         }
     }
 
-    .social ul {
-
+    .social  {
         li {
             padding-bottom: 15px;
             }

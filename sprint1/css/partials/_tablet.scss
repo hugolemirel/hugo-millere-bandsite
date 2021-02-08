@@ -1,329 +1,185 @@
+// HEADER -----------------------------------------
 .header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 14vh;
-    background-color: $black-on-white;
-    position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 14vh;
+  background-color: $black-on-white;
+  position: relative;
 }
 
 .logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    width: 20%;
-    height: 14vh;
-    margin: 0 0 0 1.5rem;
-    top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 20%;
+  height: 14vh;
+  margin: 0 0 0 1.5rem;
+  top: 0;
 }
 
 nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    width: 30%;
-    height: 14vh;
-    padding-top: 17px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 30%;
+  height: 14vh;
+  padding-top: 17px;
 }
-
-.navLink {
-    width: 50%;
-    text-align: center;
-    a {
-        color: $white-on-black;
-        text-decoration: none;
-    }
-}
-
 
 .active {
-    border-bottom: none;
+  border-bottom: 5px solid white;
+  font-weight: 500;
 }
+// /END HEADER -----------------------------------------
 
 
+// HERO -----------------------------------------
 .hero {
-    width: 100%;
-    height: 47.22vh;
+  width: 100%;
+  height: 47.22vh;
 }
 
 .hero h1 {
-    font-size: 3.75rem;
-    line-height: 5rem;
-    margin-left: 1.5rem;
-    }
+  font-size: 3.75rem;
+  line-height: 5rem;
+  margin-left: 1.5rem;
+}
+// /END HERO -----------------------------------------
 
+
+// MAIN SECTION -----------------------------------------
 .introSection h1 {
-    font-size: 2.25rem;
+  font-size: 2.25rem;
 }
 
 .introImg {
-    margin-bottom: 1.5rem;
-    width: 100%;
+  margin-bottom: 1.5rem;
+  width: 100%;
 
-        img {
-        width: 100%;
-        height: auto;
-        }
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .introExerpt {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
 }
 
 .introExerptSignature {
-    margin-bottom: 2.5rem;
-    font-size: 1.3rem;
-    font-weight: 500;
+  margin-bottom: 2.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 h4 {
-font-size: 2rem;
+  font-size: 2rem;
 }
 
 .intro {
-    margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
 
-        p {
-            font-size: 0.88rem;
-            line-height: 1.32rem;
-        }
+  p {
+    font-size: 0.88rem;
+    line-height: 1.32rem;
+  }
 }
 
+  //Photo Section -----------------------------------------
 .gallery {
-    padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
 
-        h1 {
-            margin-bottom: 2.25rem;
-            line-height: 2rem;
-        }
+  h1 {
+    margin-bottom: 2.25rem;
+    line-height: 2rem;
+  }
 }
 
-.photoSection{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+.photoSection {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .photo {
-    margin-bottom: 1rem;
-    width: 31%;
-        img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-}
-
-
-// Conversation Section ----------------------------------
-
-.conversation {
-    padding: 2rem 1rem 2.5rem 1rem;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-
-    h1 {
-        font-size: 2rem;
-        // margin-bottom: 1.5rem;
-        // line-height: 2rem;
-    }
-}
-
-
-.innerConvers {
-    display: flex;
-    justify-content: flex-;
-    height: auto;
-    width: 100%;
-}
-
-.formCol, .commentCol{
-    width: 90%;
-    padding-left: 15px;
-}
-
-.avatarCol {
-    width: 10%;
-    height: auto;
-    padding-top: 0;
-    text-align: right;
-}
-
-.avatar{
-    margin: 0;
-    border-radius: 50%;
-    height: 54px;
-    width: 54px;
+  margin-bottom: 1rem;
+  width: 31%;
+  img {
+    max-width: 100%;
+    max-height: 100%;
   }
-
-  .avatar__form{
-    margin-top: 15px;
-  }
-
-  .avatar img {
-    height: 54px;
-    width: 54px;
-    border-radius: 50%;
-  }
-
-  input[type=text], textarea {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 0px 0 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #F7F7F7;
-    transition: 0.5s;
-    outline: none;
-    font-family: $main-fontface;
-    font-size: 0.9rem;
-  }
-
-  input[type=text]:focus {
-    border: 2px solid $black-on-white;
-  }
-
-.labelTxt {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color:#CCC;
 }
-
-textarea {
-    resize: none;
-  }
-  
-
-.button {
-    display: flex;
-    justify-content: flex-end;
-}
-
-  input[type=submit] {
-    width: 30%;
-    background-color: $black-on-white;
-    color: white;
-    padding: 14px 20px;
-    margin-top: 10px;
-    // margin-bottom: 8px;
-    padding: 1.1rem 0;
-    border: none;
-    border-radius: px;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-
-  hr.divider {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 2rem 0 1.5rem 0;
-}
-
-.commentCol {
-    width: 100%;
-}
+  // /End Photo Section -----------------------------------------
+// / END MAIN SECTION -----------------------------------------
 
 
-
-.commentAuthor {
-    width: auto;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: $black-on-white;
-}
-
-.commentDate {
-    height: auto;
-    width: auto;
-    font-size: 0.9rem;
-    color: #ccc;
-    text-align: left;
-    position: absolute;
-    right: auto;
-    margin-left: 1rem;
-    margin-top: 1px;
-}
-
-.comment {
-    height: auto;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-}
-
-// /End Conversation Section -----------------------------
-
-
-
-
+// FOOTER -----------------------------------------
 .footer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-    height: auto;
-    background-color: #323232;
-    color: white;
-    padding: 1rem 0 0 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  background-color: #323232;
+  color: white;
+  padding: 1rem 0 0 1rem;
 
-        h1 {
-            margin-left: 0;
-        }
+  h1 {
+    margin-left: 0;
+  }
 }
 
 .innerFooter {
-    width:100%;
-    margin-left:0;
-    margin-right:0;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.row1, .row2 {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    height: auto;
-    width: 100%;
+.row1,
+.row2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  width: 100%;
 }
 
 .row2 {
-    margin-top: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .footerHeader {
-    min-width: 33%;
+  min-width: 33%;
 }
 
 .footerHeader2 {
-    min-width: 33%;
-    margin-left: 20px;
+  min-width: 33%;
+  margin-left: 20px;
 }
 
 .footerHeader3 {
-    min-width: 33%;
-    text-align: right;
-    padding-right: 1rem;
-    visibility: visible;
+  min-width: 33%;
+  text-align: right;
+  padding-right: 1rem;
+  visibility: visible;
 
-    img{
-        margin-top: 28px;
-    }
-    
+  img {
+    margin-top: 28px;
+  }
 }
-
 
 .social ul {
-    margin-left: 40px;
+  margin-left: 40px;
 
-    li {
-        margin-top: 22px;
-        
-
-    }
+  li {
+    margin-top: 22px;
+  }
 }
+// / END FOOTER -----------------------------------------

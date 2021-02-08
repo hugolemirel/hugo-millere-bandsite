@@ -1,0 +1,21 @@
+// MIXINS -----------------------------------------
+
+  // ALIGNMENT-------------------------
+    @mixin flexed-hrztly-centered {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    } 
+
+    @mixin flexed-vrtcly-centered {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    @mixin flexed-hrztly-left {
+        display: flex;
+        justify-content: flex-start;
+    }
+// -------------------------------
