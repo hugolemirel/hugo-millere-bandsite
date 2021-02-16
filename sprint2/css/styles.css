@@ -80,16 +80,18 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(../img/concert-1.jpg);
+  background: url(../img/hero-photo2.jpg);
   background-size: cover;
+  background-position: 35% 40%;
   width: 100%;
   height: 183px;
   position: relative;
 }
 
 .heroTitle1 {
+  width: 80%;
   margin-top: 2rem;
-  margin-left: 1.5rem;
+  margin-left: 5%;
   margin-right: auto;
   position: relative;
 }
@@ -108,6 +110,12 @@ nav {
 }
 
 .heroOverlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -206,7 +214,7 @@ iframe {
 }
 
 .intro p {
-  font-size: 0.810rem;
+  font-size: 0.81rem;
   line-height: 1.125rem;
 }
 
@@ -239,7 +247,7 @@ iframe {
 }
 
 .gallery {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   padding: 1rem 1rem 2rem 1rem;
 }
 
@@ -265,11 +273,18 @@ iframe {
 }
 
 .photoSection .photo {
-  margin-bottom: 2.50rem;
+  margin-bottom: 2.5rem;
 }
 
 .photoSection .photo img {
   max-width: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.photoSection .photo img:hover {
+  -webkit-filter: grayscale(0%);
+  border: 1px solid #a3a3a3;
 }
 
 .message-form {
@@ -285,40 +300,127 @@ iframe {
 }
 
 #messageList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   list-style-type: none;
+  height: auto;
   width: 100%;
   padding-left: 0;
+  margin: 0 auto;
 }
 
 #messageList li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
-  padding-top: 1.5rem;
-  border-bottom: 1px solid #E1E1E1;
+  padding-top: 0.5rem;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #e1e1e1;
 }
 
 #messageList h3 {
-  display: inline;
   width: auto;
   font-size: 1rem;
   margin-right: auto;
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 #messageList h4 {
-  display: inline;
   width: auto;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: normal;
-  margin-left: 3rem;
-  color: #CCC;
+  color: #ccc;
+  margin: 0;
+  padding: 0;
 }
 
 #messageList p {
-  display: inline-block;
-  width: 100%;
+  width: auto;
   font-size: 1rem;
+  margin: 0;
+}
+
+.messageList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  list-style-type: none;
+  height: auto;
+  width: 100%;
+  padding-bottom: 1.5rem;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+.messageList li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.messageList h3 {
+  width: auto;
+  font-size: 1rem;
+  margin-right: auto;
+  margin: 0;
   padding: 0;
-  text-align: justify;
+}
+
+.messageList h4 {
+  width: auto;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.messageList p {
+  width: auto;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.commentIdent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  margin-bottom: 5px;
 }
 
 .conversContainer {
@@ -352,16 +454,17 @@ iframe {
   height: auto;
   width: 100%;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
 }
 
-.formCol, .commentCol {
+.formCol,
+.comment-col {
   width: 80%;
   padding-left: 0.94rem;
   padding-top: 1.5rem;
 }
 
-.avatarCol {
+.avatar-col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,8 +483,8 @@ iframe {
 .avatar {
   margin: 0;
   border-radius: 50%;
-  height: 48px;
-  width: 48px;
+  height: 54px;
+  width: 54px;
 }
 
 .avatar img {
@@ -390,24 +493,21 @@ iframe {
   border-radius: 50%;
 }
 
-.avatar__form {
-  margin-top: 0px;
-}
-
-input[type=text], textarea {
+input[type="text"],
+textarea {
   width: 95%;
   padding: 12px 20px;
   margin: 0px 0 15px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   outline: none;
   font-family: "AvenirNext LT Pro";
   font-size: 0.9rem;
   resize: none;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   border: 2px solid #323232;
 }
 
@@ -418,10 +518,10 @@ textarea:focus {
 .labelTxt {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #CCC;
+  color: #ccc;
 }
 
-input[type=submit] {
+input[type="submit"] {
   width: 95%;
   background-color: #323232;
   color: white;
@@ -433,12 +533,19 @@ input[type=submit] {
   outline: none;
 }
 
-.commentCol {
+.comment-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   width: 80%;
 }
 
-.commentAuthor {
+.comment-author {
   display: inline;
   width: 65%;
   font-size: 0.9rem;
@@ -446,11 +553,10 @@ input[type=submit] {
   color: #323232;
 }
 
-.commentDate {
+.comment-date {
   display: inline;
   height: auto;
   margin-top: 1px;
-  width: 35%;
   font-size: 0.9rem;
   color: #ccc;
   text-align: right;
@@ -459,6 +565,12 @@ input[type=submit] {
 }
 
 .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   height: auto;
   margin-top: 1rem;
   font-size: 0.8rem;
@@ -586,7 +698,8 @@ button {
           justify-content: flex-start;
 }
 
-.row1, .row2 {
+.row1,
+.row2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -604,29 +717,47 @@ button {
   margin-top: -20px;
 }
 
-.footerHeader {
-  min-width: 100%;
-}
-
-.footerHeader3 {
-  visibility: hidden;
-}
-
-.block1, .block2, .block3 {
+.footerHeader1 {
   min-width: 33%;
 }
 
-.block1 ul, .block2 ul, .block3 ul {
+.footerHeader3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  padding-bottom: 30px;
+}
+
+.block1,
+.block2,
+.block3 {
+  min-width: 33%;
+}
+
+.block1 ul,
+.block2 ul,
+.block3 ul {
   list-style-type: none;
   margin-left: -40px;
 }
 
-.block1 li, .block2 li, .block3 li {
+.block1 li,
+.block2 li,
+.block3 li {
   text-decoration: none;
   color: white;
 }
 
-.block1 a, .block2 a, .block3 a {
+.block1 a,
+.block2 a,
+.block3 a {
   text-decoration: none;
   color: #fff;
 }
@@ -637,18 +768,14 @@ li h4 {
 
 .social ul {
   margin-top: 20px;
-  width: 100%;
+  width: auto;
   list-style-type: none;
+  padding-left: 0;
 }
 
 .social li {
   display: inline;
   margin-right: 2rem;
-}
-
-.social ul {
-  list-style-type: none;
-  padding-left: 0;
 }
 
 .copy {
@@ -816,9 +943,10 @@ li h4 {
   }
   .innerConvers {
     padding-top: 1rem;
-    border-bottom: 2px solid #E1E1E1;
+    border-bottom: 2px solid #e1e1e1;
   }
-  .formCol, .commentCol {
+  .formCol,
+  .commentCol {
     width: 90%;
     padding-left: 15px;
   }
@@ -829,7 +957,8 @@ li h4 {
   .avatar__form {
     margin-top: 15px;
   }
-  input[type=text], textarea {
+  input[type="text"],
+  textarea {
     width: 100%;
     margin: 0px 0 20px 0;
   }
@@ -841,7 +970,7 @@ li h4 {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  input[type=submit] {
+  input[type="submit"] {
     width: 30%;
     margin-top: 10px;
     padding: 1.1rem 0;
@@ -936,7 +1065,8 @@ li h4 {
     margin-left: 0;
     margin-right: 0;
   }
-  .row1, .row2 {
+  .row1,
+  .row2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -980,7 +1110,7 @@ li h4 {
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1280px) {
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
