@@ -1,45 +1,39 @@
-const showsList = document.querySelector(".shows-list");
+const showsList = document.querySelector(".shows-list"); //Refers the <UL> tag in shows.html
 
-// append array of shows to dom element
-function appendShows(concerts, listElem) {
+function appendShows(concerts, listElem) {            // appends array of shows to dom element
   concerts.forEach(function (show) {
-    
-    // create <li>
-    const showLi = document.createElement("li");
+   
+    const showLi = document.createElement("li");      // creates <li>
     showLi.classList.add("shows-list__item");
     
-    // create <h2> show.date
-    const showDate = document.createElement("h2");
+    const showDate = document.createElement("h2");    // creates <h2> show.date
     showDate.classList.add("shows-list__date");
     showDate.innerText = show.date;
-
-    // create <p> show.venue
-    const showVenue = document.createElement("p");
+   
+    const showVenue = document.createElement("p");    // creates <p> show.venue
     showVenue.classList.add("shows-list__venue");
     showVenue.innerText = show.place;
     
-    // create <p>  show.location
-    const showLocation = document.createElement("p");
+    const showLocation = document.createElement("p"); // creates <p>  show.location
     showLocation.classList.add("shows-list__location");
     showLocation.innerText = show.location;
 
     const showButton = document.createElement("button");
     showButton.innerText = "Buy Tickets";
     
-    // append nodes to dom, first append all created elements to the <li>
+    // appends new nodes to dom, first appends all created elements to the <li>
     showLi.appendChild(showDate);
     showLi.appendChild(showVenue);
     showLi.appendChild(showLocation);
     showLi.appendChild(showButton);
     
-    // append created <li> to <ul>
-    listElem.appendChild(showLi);
+    listElem.appendChild(showLi);    // appends created <li> to <ul>
   });
 }
 
-// call appendShows function
 
-function loadShowData(){
+
+function loadShowData(){             // calls appendShows function
   axios.get('https://project-1-api.herokuapp.com/showdates?api_key=b739a23b-16c5-4e6a-8913-9051aca486b1')
   .then(function (response) {
     // handle success
@@ -52,13 +46,3 @@ function loadShowData(){
   })
 }
 loadShowData();
-
-
-// try to avoid using template string like below
-// const showName = 'Stevie Wonder';
-//  const htmlTemplate = `
-//       <h1>${showName}</h1>
-//       <p>hello</p>
-//     `;
-
-// showsList.innerHTML = htmlTemplate;

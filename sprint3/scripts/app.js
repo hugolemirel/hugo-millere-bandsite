@@ -1,3 +1,4 @@
+
 // ul from the DOM
 const post = document.getElementById('posts'); 
 

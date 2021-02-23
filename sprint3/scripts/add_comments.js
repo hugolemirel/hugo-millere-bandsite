@@ -1,92 +1,92 @@
 
-const messageForm = document.getElementById("messageForm");
-const messageList = document.getElementById("messageList");
-const messageArr = [];
-
-// form submit event
-messageForm.addEventListener("submit", (event) => {
-// prevent page from reloading and form submitting
-  event.preventDefault(); 
-// get the input value by the name attribute 'name'
-  const name = event.target.name.value; 
-// get the input value by the name attribute 'message'
-  const message = event.target.message.value; 
+const messageForm = document.getElementById("messageForm");// Gets the comments form
+const messageList = document.getElementById("messageList");// Gets the comments list to be populated
+const messageArr = [];// Creates the array 
 
 
-// check if name and message inputs have a value
-  if (name && message) {
-    // push an object to the message array
-    // messageArr.push({
-    //   name: name,
-    //   message: message,
-    //   timestamp: Date.now()
-    // });
+messageForm.addEventListener("submit", (event) => { // form submit event
+
+  event.preventDefault(); // prevents page from reloading and form submitting
+  const name = event.target.name.value; // gets the input value by the name attribute 'name'
+  const message = event.target.message.value; // gets the input value by the name attribute 'message'
+
+  if (name && message) { // checks if name and message inputs have a value
+    // pushes an object to the message array
+    messageArr.push({
+      name: name,
+      message: message,
+      timestamp: Date.now()
+    });
 
     postComment({
       name: name,
       comment: message,
     }) 
 
-// renderMessages function, loop through array & create DOM elements with new messages added to array above
-    renderMessages(messageArr);
+    renderMessages(messageArr); // calls "renderMessages" function, loops through array & creates DOM elements with new messages added to array above
 
-// reset the form inputs
-    event.target.reset();
+    event.target.reset(); // resets the form inputs
   } else {
  // if no values are set for the input fields
     alert("please enter a name and message");
   }
 });
 
-// append elements to the dom from array of messages
-const renderMessages = (messages) => {
-  messageList.innerHTML = ""; // clear <ul> element before appending
 
-// function which sorts the array by timestamp before looping
-  sortByDate(messages);
+  const renderMessages = (messages) => {   //appends elements to the dom from array of messages
+  messageList.innerHTML = "";              // clears <ul> element before appending
 
-// loop through messages
-  messages.forEach((message) => {
+  sortByDate(messages);                    // function which sorts the array by timestamp before looping
 
-// create avatar img
-    const avatar = document.createElement("img");
+  messages.forEach((message) => {         // loops through messages
+
+    const avatar = document.createElement("img"); // creates avatar img
     avatar.src = 'https://pbs.twimg.com/profile_images/1443771405/tom_400x400.jpg';
     avatar.classList.add('avatar');
+    
+    const messageLi = document.createElement("li"); // creates <li> as a whole data container
 
-// create <li>
-    const messageLi = document.createElement("li");
+    const avatarCol = document.createElement("div"); // creates left column for avatar
+    avatarCol.classList.add('avatar-col');
 
-// create <h3> for name
-    const nameElem = document.createElement("h3");
+    const commentCol = document.createElement("div"); // creates right column for name, date & comment
+    commentCol.classList.add('comment-col');
+
+    const commentRow1 = document.createElement("div"); // creates a first row for name and date of comment
+    commentRow1.classList.add('commentIdent');
+
+    const commentRow2 = document.createElement("div"); // creates a second row for comment paragraph.
+    commentRow2.classList.add('comment');
+
+    const nameElem = document.createElement("h3");  // creates <h3> for name
     nameElem.innerText = message.name;
-// you can add classes to each element with .classList.add();
-// nameElem.classList.add('message-form__name');
+// (I can add classes to each element with .classList.add();
+// nameElem.classList.add('message-form__name') );
 
-// create <p> for message
-    const messageElem = document.createElement("p");
+    const messageElem = document.createElement("p");  // creates <p> for message
     messageElem.innerText = message.comment;
 
-// create <time> element
-    const messageTimeElem = document.createElement("h4");
+    const messageTimeElem = document.createElement("h4");  // creates <time> element
     messageTimeElem.innerText = new Date(
       message.timestamp
     ).toLocaleDateString();
 
-// !important: append all elements to the <li> before appending to the <ul>
-    messageLi.appendChild(avatar);
-    messageLi.appendChild(nameElem);
-    messageLi.appendChild(messageTimeElem);
-    messageLi.appendChild(messageElem);
+// !IMPORTANT appends all elements to the "avatarCol", <li>, "commentCol" & "commentRows" before appending to the <ul> 
+    avatarCol.appendChild(avatar);        // inserts the avatar img in the avatar column
+    messageLi.appendChild(avatarCol);     // inserts the avatar column in the <Li>
+    messageLi.appendChild(commentCol);    // inserts the comment column in the <Li>
+    commentCol.appendChild(commentRow1);  // inserts the name and date row in the comment column
+    commentCol.appendChild(commentRow2);  // inserts the comment paragaph row in the comment column, under first row
+    commentRow1.appendChild(nameElem);    // inserts the name in the first row, in the comment column
+    commentRow1.appendChild(messageTimeElem); // inserts the date of comment in the first row,in comment column
+    commentRow2.appendChild(messageElem); // inserts the comment paragraph in the second row, in comment column
 
-// finally append to <ul>
-    messageList.appendChild(messageLi);
+    messageList.appendChild(messageLi);   //  and tadaaahhh! Finally, appends to <ul> and I made it!
   });
 };
 
 // funtion to help sort the messages array by date, 
 // call before looping https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-
-
 const sortByDate = (arr) => arr.sort((a, b) => b.timestamp - a.timestamp);
 
 
@@ -108,14 +108,14 @@ getCommentData();
 function postComment(comment) {
   axios.post('https://project-1-api.herokuapp.com/comments?api_key=b739a23b-16c5-4e6a-8913-9051aca486b1', comment)
   .then(function (response) {
-    // handle success
+    // handles success
     console.log(response);
   // renderMessages(response.data);
 
   getCommentData();
   })
   .catch(function (error) {
-    // handle error
+    // handles error
     console.log(error);
   })
 }

@@ -1,0 +1,171 @@
+.message-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  #messageList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style-type: none;
+    height: auto;
+    width: 100%;
+    padding-left: 0;
+    margin: 0 auto;
+  
+    li {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      padding-top: 0.5rem;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #e1e1e1;
+    }
+  
+    h3 {
+      width: auto;
+      font-size: 1rem;
+      margin-right: auto;
+      margin: 0;
+      padding: 0;
+    }
+  
+    h4 {
+      width: auto;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #ccc;
+      margin: 0;
+      padding: 0;
+    }
+  
+    p {
+      width: auto;
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+  
+  .commentIdent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 5px;
+  }
+  
+  .conversContainer {
+    padding: 2rem 1rem 2rem 1rem;
+    width: 100%;
+  
+    h1 {
+      margin-bottom: 0;
+      line-height: 2rem;
+    }
+  }
+  
+  .conversation {
+    padding: 2rem 1rem 2.5rem 1rem;
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      text-align: left;
+      color: $black-on-white;
+    }
+  }
+  
+  .innerConvers {
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  
+  .formCol,
+  .comment-col {
+    width: 80%;
+    padding-left: 0.94rem;
+    padding-top: 1.5rem;
+  }
+  
+  .avatar-col {
+    @include flexed-hrztly-right;
+    width: 20%;
+    height: auto;
+    text-align: right;
+    padding-top: 1.5rem;
+  }
+  
+  .avatar {
+    margin: 0;
+    border-radius: 50%;
+    height: 54px;
+    width: 54px;
+  }
+  
+  .avatar img {
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+  }
+  
+  input[type="text"], 
+  textarea {
+    width: 95%;
+    padding: 12px 20px;
+    margin: 0px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    outline: none;
+    font-family: $main-fontface;
+    font-size: 0.9rem;
+    resize: none; //only for textarea
+  }
+  
+  input[type="text"]:focus {
+    border: 2px solid $black-on-white;
+  }
+  
+  textarea:focus {
+    border: 2px solid $black-on-white;
+  }
+  
+  .labelTxt {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ccc;
+  }
+  
+  input[type="submit"] {
+    width: 95%;
+    background-color: $black-on-white;
+    color: white;
+    padding: 14px 20px;
+    margin-top: -5px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .comment-col {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+  }
+    
+  .comment {
+    display: flex;
+    justify-content: left;
+    height: auto;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+

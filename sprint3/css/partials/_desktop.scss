@@ -1,55 +1,26 @@
 // HEADER -----------------------------------------
-    .header {
-        display: flex;
+
+.header {
+        // display: flex;
         justify-content: flex-start;
         align-items: center;
-        height: 14vh;
+        padding-left: 11.25rem;
         background-color: $black-on-white;
     }
  
-    .header__logo {
-    width: 7.13rem;
-    height: 14vh;
-    margin: 0 0 0  1.5rem;
-    }
-    
-    .logo, .hero h1 {
-        margin-left: 10.25rem;
-    }
-
-    nav {
-    width: 30%;
-    height: 14vh;
-    padding-top: 0;
-    }
-
     .nav__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 5rem;
     height: 14vh;
-    margin-left: 3.5rem;
-    padding-top: 1.06rem;
-        a {
-            color: #fff;
-        }
+    padding-top: 0.8rem;
     }
 
-    .nav__item--active {
-        border-bottom: 0.310rem solid  white;
-        }
-// /END HEADER -----------------------------------------
-
-
+// /END HEADER -----------------------------------
 
 
 // HERO -----------------------------------------
 
 .hero {
-    width: 100%;
-    height: 670px;
-    padding-left: 8.9rem;
+    padding-left: 12.8rem;
     padding-top: 10rem;
 }
 
@@ -58,42 +29,55 @@
     justify-content: flex-start;
     align-items: flex-end;
     padding: 0;
-    width: 1200px;
     margin-top: 3rem;
     margin-right: auto;
+
+    h1 {
+        margin: 0;
+    }
 }
 
 .hero h1 {
     font-size: 3.75rem;
     line-height: 5rem;
-    margin: 0 0 0 1.5rem;
     max-width: 50%;
 }
         
 .heroTitle1 {
     margin-top: 0;
+
+    h1 {
+        margin-left: 12.5rem;
+    }
         h3 {                                         
             font-size: 1.5rem;
             margin:0 0;
-                }
+        }
+}
+
+.heroTitle2 {
+    margin-top: 0;
+
+     h3 {                                         
+        font-size: 1.5rem;
+        color: white;
+        margin:0 0;
+    }
 }
 
 iframe {
-    width: 436px;
-    height: 146px;
+    width: 27.25rem;
+    height: 9.12rem;
     background-color: #777;
-    z-index: 15;
-    margin-left: 64px;
+    margin-left: 4rem;
     margin-bottom: 1.6rem;
 }
 // / END HERO -----------------------------------------
 
 
-
-
 // MAIN SECTION -----------------------------------------
+
         .introSection h1 {
-            font-size: 2.25rem;
             margin: 3rem 0 3rem 11.25rem;
         }
 
@@ -122,7 +106,6 @@ iframe {
             margin-right: auto;
             margin-bottom: 3.5rem;
             margin-top: 2.50rem;
-            font-size: 1.3rem;
         }
 
         .introTitle {
@@ -131,24 +114,29 @@ iframe {
             margin-right: auto;
         }
 
+        .intro {
+            width: 896px;
+            margin: 0 auto 0 auto;
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+          
+                li {
+                    display: inline;
+                    width: 50%;
+                    list-style: none;
+                    margin-right: 24px;
+                }
+            }
+        }
+
         h4 {
             margin-right: auto;
             margin-bottom: 2rem;
-            font-size: 2rem;
         }
-    
-        .intro {
-            width: 896px;
-            margin-left: auto;
-            margin-right: auto;
-            columns: 420px 2;
-            column-gap: 2.50rem;
-        
-            p {
-                font-size: 0.88rem;
-                line-height: 1.32rem;
-            }
-        }
+
 
         // Photo Section -----------------------------------------
         .gallery {
@@ -164,9 +152,6 @@ iframe {
         }
 
         .photoSection {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-around;
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
@@ -178,32 +163,26 @@ iframe {
             max-height: 193px;
 
             img {
-                max-width: 100%;
                 max-height: 100%;
             }
         }
 
   // /End Photo Section -----------------------------------------
 
-// Conversation Section ----------------------------------
+
+// Conversation Section -----------------------------
+
 .conversContainer {
-    padding: 3rem 1rem 2rem 1rem;
-    width: 100%;
+
     h1 {
-        margin-bottom: 1.5rem;
-        line-height: 2rem;
         margin-left: 180px;
     }
 }
 
 .conversation {
-    padding: 2rem 1rem 2.5rem 1rem;
     max-width: 528px;
-    margin-left: auto;
-    margin-right: auto;
 
     h1 {
-        font-size: 2rem;
         margin-bottom: 3.5rem;
     }
 }
@@ -218,7 +197,6 @@ iframe {
 }
 
 .avatarCol {
-    width: 10%;
     height: auto;
     padding-top: 0;
 }
@@ -227,13 +205,8 @@ iframe {
     margin-top: 15px;
   }
 
-  .avatar img {
-    height: 48px;
-    width: 48px;
-  }
 
   input[type=text], textarea {
-    width: 100%;
     margin: 8px 0 24px 0;
     border: 1px solid #ccc;
   }
@@ -248,11 +221,6 @@ iframe {
     font-weight: 500;
     color:#CCC;
 }
-  
-.button {
-    display: flex;
-    justify-content: flex-end;
-}
 
   input[type=submit] {
     width: 160px;
@@ -262,35 +230,14 @@ iframe {
     font-weight: 600;
   }
 
-.commentCol {
-    width: 460px;
-}
-
-.commentAuthor {
-    width: auto;
-}
-
-.commentDate {
-    width: auto;
-    text-align: left;
-    right: auto;
-    margin-left: 1rem;
-    margin-top: 1px;
-}
-
-.comment {
-    height: auto;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-}
 
 // /End Conversation Section -----------------------------
+
 
 // ADD-ONS SHOW SECTION -----------------------------
 
 .showListContnr{
     margin: 0 180px;
-
 
     h1 {
         max-width: 10%;
@@ -302,93 +249,51 @@ iframe {
     margin-left: 180px;
     margin-right: 180px;
     margin-top: -5rem;
-
-    &__item {
-        display: flex;
-        flex-direction: row;
-    }
-
-    &__date {
-        &::before {
-            content: "DATE";
-            margin-bottom: 1rem;
-            margin-right: auto;
-        }
-      margin: 0.625rem 0;
-      margin-bottom: 0.9rem;
-      width: 30%;
-    }
-
-    &__venue {
-      width: 30%;
-      &::before {
-        content: "VENUE";
-        margin-right: auto;
-    } 
-    }
-
-    &__location {
-    &::before {
-        content: "LOCATION";
-        color: #ccc;
-        display:block;
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-    }
-    }
 }  
-
 
   button {
     width: 160px;
     margin-left:5px;
 }
+
+
      // /End Add-ons Show Section -----------------------------
 
   // / END MAIN SECTION -----------------------------------------
 
 
 
-
 // FOOTER -----------------------------------------
 
-    .footer {
-        justify-content: flex-start;
+    footer {
         align-items: center;
         padding-top: 1rem;
-    
-        h1 {
-            margin: 0;
-        }
     }
 
     .innerFooter {
-        width: 1160px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 180px;
+        margin-right: 180px;
     }
 
     .row1 {
-        justify-content: space-evenly;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
         margin-top: 3rem;
         width: 100%;
-
-        &row2 {
-                margin-top: 1.25rem;
-                margin-right: auto;
-                width: 80%;
-            }
-        }
 
     .row3 {
         width: 100%;
         text-align:left;
     }
     
-    .footerHeader1 {
-        min-width: 25%;
+    .footerHeader {
+        min-width: 20%;
 
+        h1 {
+         padding: 0;
+         margin: 0;
+        }
     }
 
     .footerHeader2 {
@@ -397,10 +302,8 @@ iframe {
     }
 
     .footerHeader3 {
-        min-width: 40%;
-        text-align: right;
-        visibility: visible;
-        
+        min-width: 10%;
+
         img {
             max-width: 120px;
             max-height: 24px;
@@ -409,8 +312,11 @@ iframe {
     }
 
     .social ul {
-        margin-top: 20px;
+        margin-top: 1.25rem;
+
         li {
-            padding-bottom: 15px;
-            }
+        padding-bottom: 1rem;
+        }
     }
+}
+   
